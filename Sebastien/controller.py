@@ -6,16 +6,21 @@ from PyQt5.QtCore import Qt, QResource, QByteArray
 
 class Controller:
     def __init__(self, model, view):
+        #print("Controller.__init__")
+        #print(model)
         self.model = model
         self.view = view
-        self.connect_signals_with_data()
+        #self.connect_signals_with_data()
+        self.connect_signals_with_list()
 
     def connect_signals_with_list(self):
+        print("Controller.connect_signals_with_list")
         self.view.button_ronnie.clicked.connect(lambda: self.display_random_image_from_list('Ronnie'))
         self.view.button_thailand.clicked.connect(lambda: self.display_random_image_from_list('Thailande'))
         self.view.button_cambodia.clicked.connect(lambda: self.display_random_image_from_list('Cambodge'))
     
     def display_random_image_from_list(self, button_id):
+        #print("ici")
         image_path = self.model.get_random_image_from_list(button_id)
         if image_path:
             self.set_image_from_path(image_path)

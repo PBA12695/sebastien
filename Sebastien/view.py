@@ -5,6 +5,7 @@ import os
 
 class View(QMainWindow):
     def __init__(self):
+        #print("View.__init__")
         super().__init__()
         self.create_UI()
         self.style_UI()

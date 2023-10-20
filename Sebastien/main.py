@@ -7,6 +7,7 @@ from model import Model
 from resource_rc import *
 
 if __name__ == "__main__":
+    #print("hello")
     app = QApplication(sys.argv)
     model = Model()
     view = View()
