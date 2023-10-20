@@ -6,4 +6,5 @@ pyrcc5 resource.qrc -o resource_rc.py
 #Then, you need to generate the exe file with command
 pyinstaller --onefile main.py
 
+#Thank you Sebastien
 
